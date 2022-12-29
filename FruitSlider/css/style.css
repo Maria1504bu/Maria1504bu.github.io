@@ -1,18 +1,17 @@
   
 .slider{
-    top: 10%;
-    height: 80%;
+    height: 100%;
     max-width: 940px;
     display: block;
     margin: 0px auto;
 }
 
 .slide-viewer{
-    height: 600px;
+    top: 10%;
+    height: 80%;
     overflow: hidden;
     position: relative;
     background-color: rgb(235, 217, 230);
-    color: rgb(198, 176, 176);
 }
 
 .slide-group {
@@ -42,10 +41,8 @@ img{
 }
 
 .slide-buttons {
-    display: inline-block;
-    vertical-align: middle;
     position: absolute;
-    z-index: 1;
+    height: 100%;
 }
 
 .buttons-left{
@@ -74,4 +71,11 @@ img{
 .slide-btn:hover, .slide-btn.hover{
     color: blueviolet;
     cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+    .slide-viewer{
+        top: 20%;
+        height: 60%;
+    }
 }
