@@ -6,8 +6,8 @@
 }
 
 .slide-viewer{
-    top: 10%;
-    height: 80%;
+    top: 5%;
+    height: 90%;
     overflow: hidden;
     position: relative;
     background-color: rgb(247, 245, 237);
@@ -41,7 +41,9 @@ img{
 
 .slide-buttons {
     position: absolute;
-    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
 }
 
 .buttons-left{
@@ -56,9 +58,9 @@ img{
     display: block;
     border: none;
     background: none;
+    margin: 0, auto;
     color: rgb(33, 4, 52);
     font-size: 300%;
-    line-height: 2em;
 }
   
   
@@ -74,7 +76,22 @@ img{
 
 @media screen and (max-width: 425px) {
     .slide-viewer{
-        top: 20%;
-        height: 60%;
+        top: 10%;
+        height: 80%;
+    }
+
+    .slide-group {
+        left: 10%;
+        width: 80%;
+    }
+    .buttons-left{
+        left: 5%;
+    }
+    
+    .buttons-right{
+        right: 5%
+    }
+    .slide-btn {
+        font-size: 200%;
     }
 }
