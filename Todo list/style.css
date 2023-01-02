@@ -29,6 +29,7 @@ body {
   
   .header {
     background-color: #333;
+    width: 100%;
     padding: 10px 0;
     margin-bottom: 40px;
   }
@@ -47,13 +48,13 @@ body {
     cursor: pointer;
   }
   
-  .header .container .form {
+  .header .container form {
     width: 60%;
     display: flex;
     justify-content: space-between;
   }
   
-  .header .container .form input {
+  .header .container form input {
     width: calc(100% - 145px);
     height: 40px;
     text-indent: 10px;
@@ -65,7 +66,7 @@ body {
     transition: 0.2s border;
   }
   
-  .header .container .form input:focus {
+  .header .container form input:focus {
     border: 1px solid #12c0dd;
   }
   

@@ -16,6 +16,7 @@ Vue.createApp({
                 title : this.valueInput,
                 id : Math.random()
             });
+            localStorage.needDoList = JSON.stringify(this.needDoList);
             this.valueInput = '';
         },
         doCheck (index, type) {
@@ -26,6 +27,8 @@ Vue.createApp({
                 const noCompleteMask = this.completeList.splice(index, 1);
                 this.needDoList.push(...noCompleteMask);
             }
+            localStorage.needDoList = JSON.stringify(this.needDoList);
+            localStorage.completeList = JSON.stringify(this.completeList);
         },
         removeMask(index, type) {
             if(type === 'need'){
@@ -33,6 +36,16 @@ Vue.createApp({
             } else {
                 this.completeList.splice(index, 1);
             }
+            localStorage.needDoList = JSON.stringify(this.needDoList);
+            localStorage.completeList = JSON.stringify(this.completeList);
+        }
+    },
+    mounted(){
+        if(localStorage.needDoList){
+            this.needDoList = JSON.parse(localStorage.needDoList);
+        }
+        if(localStorage.completeList){
+            this.completeList = JSON.parse(localStorage.completeList);
         }
     }
 }).mount('#app');
