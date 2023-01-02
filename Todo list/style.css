@@ -22,13 +22,13 @@ body {
   }
   
   .container {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 15px;
   }
   
   .header {
-    background-color: #333;
+    background-color: rgb(18, 4, 35);
     width: 100%;
     padding: 10px 0;
     margin-bottom: 40px;
@@ -67,12 +67,12 @@ body {
   }
   
   .header .container form input:focus {
-    border: 1px solid #12c0dd;
+    border: 2px solid #9c2fef;
   }
   
   .btn {
-    background-color: #12c0dd;
-    border: 1px solid #12c0dd;
+    background-color: #9c2fef;
+    border: 1px solid #7a6984;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
@@ -84,8 +84,8 @@ body {
   }
   
   .btn:hover {
-    background-color: #0dd6f8;
-    border-color: #0dd6f8;
+    background-color: #35194a;
+    border-color: #9e97a3;
   }
   
   .mask-list li {
