@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: #e9dbfa;
+    background: linear-gradient(to right,
+            #faaaaf,
+            #e9bdfa,
+            #d1faf2);
+}
+i{
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: repeat(4, 8rem);
+    grid-gap: 2rem;
+    perspective: 800px;
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s ease;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+.face,
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.back {
+    backface-visibility: hidden;
+}
+
+.choosed {
+    transform: rotateY(180deg);
+}
+
+.matched {
+    pointer-events: none;
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 425px) {
+    section {
+        grid-template-columns: repeat(4, 5rem);
+        grid-template-rows: repeat(4, 7rem);
+        grid-gap: 1rem;
+    }
+}
